@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              #but1{
+            background-color:cadetblue;
+            padding: 10px 25px;
+            border: 2px;
+            border-radius: 5px;
+            position: relative;
+        left: 550px;
+        }
+        #but2{
+            background-color:cadetblue;
+            padding: 10px 25px;
+            border: 2px;
+            border-radius: 5px;
+            position: relative;
+             left: 600px;        
+        }
+      
+      </style>
+</head><body>
+
+<center>
+  <h1>Student Registration Information</h1>
+  <table><div>
+    <tr><td><p id="demo">Student Name:</p></td><td><p id="name"></p></td></tr>
+  <tr> <td><p id="demo">Date Of Birth:</p></td><td><p id="dob"></p></td></tr>
+<tr><td> <p id="demo">Email :</p></td><td><p id="email"></p></td></tr>
+<tr><td><p id="demo">Phone Number:</p></td><td><p id="phno"></p></td></tr>
+<tr><td><p id="demo">Address:</p></td><td><p id="Address"></p></td></tr>
+<tr><td><p id="demo">Gender:</p></td><td><p id="gender"></p></td></tr>
+<tr><td><p id="demo">City:</p></td><td><p id="city"></p></td></tr>
+<tr><td><p id="demo">Pincode:</p></td><td><p id="pincode"></p></td></tr>
+<tr><td><p id="demo">State:</p></td><td><p id="state"></p></td></tr>
+<tr><td><p id="demo">country:</p></td><td><p id="country"></p></td></tr>
+<tr><td><p id="demo">Hobbies:</p></td><td><p id="hobby"></p></td></tr>
+<tr><td><p id="demo">SSLC:</p><td><p id="10th"></p></td></tr>
+<tr><td><p id="demo">HSC:</p></td><td><p id="12th"></p></td></tr>
+<tr><td><p id="demo">UG:</p></td><td><p id="ug"></p></td></tr>
+<tr><td><p id="demo">PG:</p></td> <td><p id="pg"></p></td></tr>
+<tr><td><p id="demo">Course:</p></td><td><p id="course"></p></td> </tr>
+</div></table></center>
+<button id="but1" onclick="go_back()">Edit</button><button id="but2" onclick="printpage()">Print</button>
+
+<script>
+        window.onload = function() {
+          // Get the value from localStorage
+          var name = localStorage.getItem('sname');
+          var dob = localStorage.getItem('sdob');
+          var email = localStorage.getItem('semail');
+          var phno = localStorage.getItem('sphno');
+          var add = localStorage.getItem('saddress');
+          var gender = localStorage.getItem('sgender');
+          var city = localStorage.getItem('scity');
+          var pin = localStorage.getItem('spincode');
+          var state = localStorage.getItem('sstate');
+          var cntr = localStorage.getItem('scountry');
+          var hob = localStorage.getItem('shob');
+          var x = localStorage.getItem('s10');
+          var y= localStorage.getItem('s12');
+          var a = localStorage.getItem('sug');
+          var b= localStorage.getItem('spg');
+          var course= localStorage.getItem('scrs');
+
+
+          // Display the value on the page
+        document.getElementById('name').innerHTML=name;
+        document.getElementById('dob').innerHTML=dob;
+        document.getElementById('email').innerHTML=email;
+        document.getElementById('phno').innerHTML=phno;
+        document.getElementById('Address').innerHTML=add;
+        document.getElementById('gender').innerHTML=gender;
+        document.getElementById('pincode').innerHTML=pin;
+        document.getElementById('city').innerHTML=city;
+        document.getElementById('state').innerHTML=state;
+        document.getElementById('country').innerHTML=cntr;
+        document.getElementById('hobby').innerHTML=hob;
+        document.getElementById('10th').innerHTML=x;
+        document.getElementById('12th').innerHTML=y;
+        document.getElementById('ug').innerHTML=a;
+        document.getElementById('pg').innerHTML=b;
+        document.getElementById('course').innerHTML=course;
+      };
+      function go_back(){
+      window.history.back();
+      }
+      function printpage(){
+        window.print();
+      }
+      </script>
+</body>
